@@ -1,13 +1,11 @@
 <script setup lang="ts">
-import Login from './components/user/Login.vue';
-import Navigation from './components/Navigation.vue';
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <Login />
-  <Navigation/>
+  <RouterView />
 </template>
 
 <style scoped>
-
 </style>
+
