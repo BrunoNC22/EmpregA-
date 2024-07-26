@@ -92,10 +92,7 @@ const handleSubmit = () => {
   font-family: "Kanit";
   font-size: 23px;
   font-weight: 700;
-  font-stretch: normal;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: center;
   color: rgba(0, 0, 0, 0.8);
   border: none;
