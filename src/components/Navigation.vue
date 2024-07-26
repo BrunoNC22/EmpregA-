@@ -10,7 +10,9 @@
 
 
         <div class="options">
-            <div class="searchIcon">O</div>
+            <div class="searchIcon">O
+                <i> </i>
+            </div>
             <div class="menu">M</div>
         </div>
     </nav>
@@ -24,7 +26,6 @@
         width: 100%;
 
         padding: 24px 24px;
-       
 
     }
 
