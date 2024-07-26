@@ -4,16 +4,27 @@
 
 <template>
     <nav class="navmenu">
+
         <div>
-            Logo
-        </div>
-
-
-        <div class="options">
-            <div class="searchIcon">O
-                <i> </i>
+            <div>
+                Logo
             </div>
-            <div class="menu">M</div>
+
+
+            <div class="options">
+            
+                <div class="searchIcon">
+                    <img src="../assets/icon-search.png" alt="Search Icon">
+                </div>
+                <div class="menu">
+                    <img src="../assets/icon-menu.png" alt="Menu Icon">
+                </div>
+            </div>
+        </div>
+        
+
+        <div>
+            Bem-vindo(a), <strong>Matheus</strong>
         </div>
     </nav>
 </template>
@@ -24,6 +35,7 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        height: 100px;
 
         padding: 24px 24px;
 

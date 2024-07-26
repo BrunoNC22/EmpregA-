@@ -1,20 +1,11 @@
 <script setup lang="ts">
 
-    import Navigation from './components/Navigation.vue';
+
 
 
 </script>
 
 <template>
-    <main>
-        <Navigation class="navbar"/>
-        
-        <section>
-            <p>Bem vindo, <strong>Matheus</strong></p>
-        </section>
-         
-
-    </main>
     
 </template>
 
