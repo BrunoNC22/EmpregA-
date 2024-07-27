@@ -51,6 +51,11 @@ table {
   --primary-green-color: #17B840;
   --primary-yellow-color: #FFE11E;
   --primary-white-color: #FFFFFF;
+  --primary-background-color: #F5F7FB;
   padding: 0px;
   margin: 0px;
+  --breakpoint-small: 480px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 1024px;
+  --breakpoint-xlarge: 1200px;
 }
