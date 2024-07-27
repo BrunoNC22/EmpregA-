@@ -24,29 +24,20 @@
                 </div>
             </div>
         </div>
-        
-
-        <div>
-            Bem-vindo(a), <span>Matheus</span>
-        </div>
     </nav>
 </template>
 
 <style >
     .navigation-container{
-        display: flex;
-        flex-direction: column;
-        justify-items: flex-start;
-        justify-content: space-between;
-        align-content: baseline;
         height: 100px;
-
-        padding: 48px 24px 12px;
+        padding: 48px 32px 12px;
+        background-color: transparent;
 
     }
 
     .navmenu{
         display: flex;
+        align-items: center;
         justify-content: space-between ;
     }
 
@@ -61,8 +52,16 @@
         gap: 24px;
     }
 
+    .options div{
+        padding: 4px;
+
+    }
+    .options img{
+        width: 32px;
+    }
     .options div:hover{
         cursor: pointer;
+       
         
     }
 
@@ -70,23 +69,9 @@
         font-weight: bold;
     }
 
-    /* Tablet */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .navigation-container {
-        padding: 24px 32px;
-    }
-
-    .navmenu {
-        width: 90%;
-    }
-
-    .options {
-        gap: 36px;
-    }
-}
 
 /* Phone */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .logo-container {
         width: 100px;
         justify-content: center;
@@ -117,4 +102,5 @@
         
     }
 }
+
 </style>
