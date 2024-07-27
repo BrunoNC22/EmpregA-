@@ -8,7 +8,7 @@
         <div class="navmenu">
             <div class="logo-container">
                 <a href="">
-                    <img src="../assets/empregae-text-logo.png" alt="empregae logo">
+                    <img src="/assets/empregae-text-logo.png" alt="empregae logo">
                 </a>
                 
             </div>
@@ -17,10 +17,10 @@
             <div class="options">
             
                 <div class="searchIcon">
-                    <img src="../assets/icon-search.png" alt="search icon">
+                    <img src="/assets/icon-search.png" alt="search icon">
                 </div>
                 <div class="menu">
-                    <img src="../assets/icon-menu.png" alt="menu icon">
+                    <img src="/assets/icon-menu.png" alt="menu icon">
                 </div>
             </div>
         </div>
@@ -41,6 +41,13 @@
         justify-content: space-between ;
     }
 
+    .logo-container{
+        width: 200px;
+    }
+
+    .logo-container img{
+        width: 100%;
+    }
 
     .logo-container:hover{
         cursor: pointer;
