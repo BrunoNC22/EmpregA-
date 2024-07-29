@@ -46,11 +46,8 @@ table {
 
 
 :root {
-  height: 100%;
   --primary-blue-color: #1651B5;
   --primary-green-color: #17B840;
   --primary-yellow-color: #FFE11E;
   --primary-white-color: #FFFFFF;
-  padding: 0px;
-  margin: 0px;
 }
