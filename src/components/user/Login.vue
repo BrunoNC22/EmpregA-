@@ -44,12 +44,15 @@ const handleSubmit = () => {
 }
 </script>
 <template>
+
+  <!-- I moved the assets folder to the public folder, it makes it easier to import things -->
+   
   <div class="login-container">
     <div class="login-header">
-      <img src="../../assets/empregae-text-logo.png" alt="EmpregAE logo" class="empregae-text-logo" > 
+      <img src="/assets/empregae-text-logo.png" alt="EmpregAE logo" class="empregae-text-logo" > 
     </div>
     <form class="login-form" @submit.prevent="handleSubmit">
-      <img src="../../assets/login-user-icon.svg">
+      <img src="/assets/login-user-icon.svg">
       <LoginFormInput v-for="obj in form" :key="obj.placeholder" :model="obj"/>
       <button class="login-submit-buttom" type="submit" >CONFIRMAR</button>
     </form>
@@ -92,10 +95,7 @@ const handleSubmit = () => {
   font-family: "Kanit";
   font-size: 23px;
   font-weight: 700;
-  font-stretch: normal;
   font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: center;
   color: rgba(0, 0, 0, 0.8);
   border: none;
