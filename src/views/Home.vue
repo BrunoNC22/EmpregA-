@@ -50,18 +50,14 @@ const options = ref<OptionsType[]>([
 .profile-container {
   background-color: var(--primary-background-color);
   height: 100vh;
-  padding: 32px 24px;
-  display: flex;
-  align-items: flex-start; 
-  justify-content: center; 
 }
 
 .section-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 8px;
 }
 
 .user-hi {
@@ -73,9 +69,7 @@ const options = ref<OptionsType[]>([
 
 .cards-wrapper {
   margin-top: 60px; 
-  display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .cards-container {
@@ -84,7 +78,7 @@ const options = ref<OptionsType[]>([
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
+  gap: 12px;
 }
 
 .card-container {
@@ -99,6 +93,8 @@ const options = ref<OptionsType[]>([
   text-align: center;
 }
 
+
+
 .card-container img {
   max-width: 100%;
   height: auto;
@@ -108,5 +104,12 @@ const options = ref<OptionsType[]>([
 .card-container p {
   font-weight: 600;
   margin: 0;
+}
+
+/* Phone */
+@media screen and (max-width: 768px){
+  .card-container{
+    padding: 8px;
+  }
 }
 </style>
