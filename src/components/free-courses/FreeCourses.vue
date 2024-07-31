@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Navigation from '../Navigation.vue';
-
-Navigation
 </script>
 <template>
-  <Navigation />
+  <div class="free-courses-container"></div>
 </template>
 <style>
-
+.free-courses-container {
+  background: #fff;
+  height: 100%;
+}
 </style>
