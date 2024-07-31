@@ -27,7 +27,7 @@
     </nav>
 </template>
 
-<style >
+<style scoped>
     .navigation-container{
         height: 100px;
         padding: 48px 32px 12px;

@@ -47,13 +47,11 @@ table {
 
 
 :root {
-  --primary-blue-color: #1651B5;
-  --primary-green-color: #17B840;
+  --primary-blue-color: #1651B8;
+  --primary-green-color: #17B83e;
   --primary-yellow-color: #FFE11E;
   --primary-white-color: #FFFFFF;
   --primary-background-color: #F5F7FB;
-  padding: 0px;
-  margin: 0px;
   --breakpoint-small: 480px;
   --breakpoint-medium: 768px;
   --breakpoint-large: 1024px;
