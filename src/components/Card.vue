@@ -34,7 +34,7 @@ const navigateTo = () => {
     </div>
 </template>
 
-<style>
+<style scoped>
 .card-container {
     display: flex;
     background-color: var(--primary-white-color);
