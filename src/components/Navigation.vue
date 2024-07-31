@@ -7,9 +7,9 @@
 
         <div class="navmenu">
             <div class="logo-container">
-                <a href="">
+                <RouterLink to="/home">
                     <img src="/assets/empregae-text-logo.png" alt="empregae logo">
-                </a>
+                </RouterLink>      
                 
             </div>
 

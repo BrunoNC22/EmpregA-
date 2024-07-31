@@ -1,6 +1,7 @@
 <script setup  lang="ts">
 import { reactive, ref } from 'vue';
 import LoginFormInput from './login_form/LoginFormInput.vue';
+import router from '../../router';
 
 type LoginFormType = [
   username: {
@@ -38,9 +39,8 @@ const form: LoginFormType = reactive([
   }
 ])
 
-const handleSubmit = () => {
-  console.log('Form submited')
-  alert("submit buttom pressed")
+const handleSubmit = async () => {
+  await router.push({path: '/home'})
 }
 </script>
 <template>
@@ -61,7 +61,7 @@ const handleSubmit = () => {
 <style scoped>
 .login-container {
   background: var(--primary-blue-color);
-  height: 100vh;
+  height: 100%;
 }
 
 .login-header {
@@ -99,5 +99,6 @@ const handleSubmit = () => {
   text-align: center;
   color: rgba(0, 0, 0, 0.8);
   border: none;
+  cursor: pointer;
 }
 </style>
