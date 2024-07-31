@@ -61,7 +61,7 @@ const handleSubmit = async () => {
 <style scoped>
 .login-container {
   background: var(--primary-blue-color);
-  height: 100vh;
+  height: 100%;
 }
 
 .login-header {
