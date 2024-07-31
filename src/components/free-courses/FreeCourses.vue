@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import Navigation from '../Navigation.vue';
 
+Navigation
 </script>
 <template>
-  Free courses
+  <Navigation />
 </template>
 <style>
 
