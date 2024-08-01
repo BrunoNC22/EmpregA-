@@ -3,6 +3,7 @@ import Login from '../components/user/Login.vue'
 import Home from '../views/Home.vue'
 import FreeCourses from '../components/free-courses/FreeCourses.vue'
 import MainFrame from '../components/main-frame/MainFrame.vue'
+import Opportunities from '../components/opportunities/Opportunities.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
           path: "/cursos",
           name: "Cursos",
           component: FreeCourses
+        },
+        {
+          path: "/oportunidades",
+          name: "Oportunidades",
+          component: Opportunities
         }
       ]
     },

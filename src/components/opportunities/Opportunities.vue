@@ -15,18 +15,13 @@ interface OptionsType {
 
 const options = ref<OptionsType[]>([
   { title: 'Vendedor', employer: 'C&A', image: "https://cea.vtexassets.com/arquivos/header-logo-update.png", 
-    date: "", job_hours:"30h/semana", value:"1600", link: '/detail' 
+    date: "há 14 dias", job_hours:"30h/semana", value:"1600", link: '/detail' 
   },
   
 ]);
 </script>
 <template>
-  <Navigation />
   <main class="profile-main">
-    <div class="title-container">
-      <h1>Oportunidades</h1>
-    </div>
-  
     <div class="opportunities-container">
         <div class="search-box">
         <input
@@ -62,34 +57,26 @@ main {
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  padding-inline: 12px; 
+  background-color: var(--primary-yellow-color);
+  padding: 16px;
   
 }
 
-.title-container {
-  font-size: 32px;
-  margin: 24px 0;
-  color: var(--primary-blue-color);
-  text-align: center;
-}
-
 .opportunities-container {
-  background-color: var(--primary-yellow-color);
   display: flex;
   flex-direction: column;
+  width: 360px;
   align-items: center;
   justify-content: center; 
-  padding: 16px; 
   border-radius: 16px;
-  max-width: 800px; 
- 
 }
 
 .search-box {
   position: relative;
-  margin-bottom: 1.25rem; /* Adiciona margem inferior */
+  width: 280px;
+  margin-bottom: 1.25rem;
   margin-right: 14px;
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .search-box input {

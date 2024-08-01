@@ -52,14 +52,22 @@ const navigateTo = () => {
       </div>
 
       <div class="job-information">
-        <p>{{cardProps.title}}</p>
-        <p>{{cardProps.employer}}</p>
-        <p>{{cardProps.date}} - {{cardProps.job_hours}}</p>
+        <div>
+          <p id="title">{{cardProps.title}}</p>
+
+          <div class="job-value-employer">
+            <p id="employer">{{cardProps.employer}}</p>
+            <p id="value">R$ {{cardProps.value}}</p>
+          </div>
+          
+          <p id="date-hour">{{cardProps.date}} - {{cardProps.job_hours}}</p>
+        </div>
+        
+
+       
       </div>
 
-      <div class="job-value">
-        <p>R$ {{cardProps.value}}</p>
-      </div>
+     
 
     </div>
         
@@ -68,15 +76,16 @@ const navigateTo = () => {
 
 <style scoped>
 .card-container {
-    background-color: var(--primary-white-color);
-    box-shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    width: 100%;
-    height: 80px;
-    padding: 16px;
-    border-radius: 10px;
-    display: flex;
-    align-content: center;
-    cursor: pointer;
+  background-color: var(--primary-white-color);
+  box-shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 300px;
+  height: 80px;
+  padding: 16px 16px;
+  border-radius: 10px;
+  display: flex;
+  cursor: pointer;
+  box-sizing: border-box;
+  justify-content: start;
 }
 
 .card-container:hover{
@@ -84,23 +93,48 @@ const navigateTo = () => {
 }
 
 .card-info{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    
+  display: flex;
+  align-items: center;
+  gap: 8px;
+ 
 }
+
+.job-information{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+}
+
+#title{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.job-value-employer{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+#date-hour{
+  font-size: 12px;
+  margin-top: 4px;
+}
+
 .image-container{
-  width: 80px;
+  width: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 8px;
   box-shadow:rgba(0, 0, 0, 0.1) 0px 4px 12px; 
 }
 
 img{
-    width: 60px;
+    width: 100%;
 }
 
 </style>

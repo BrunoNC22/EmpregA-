@@ -16,7 +16,7 @@ interface OptionsType {
 
 const options = ref<OptionsType[]>([
   { title: 'Seu Perfil', icon: '/assets/icon-perfil.png', link: '/profile' },
-  { title: 'Oportunidades', icon: '/assets/icon-search-y.png', link: '/opportunities' },
+  { title: 'Oportunidades', icon: '/assets/icon-search-y.png', link: '/oportunidades' },
   { title: 'Cursos Gratuitos', icon: '/assets/icon-student.png', link: '/cursos' },
   { title: 'Currículo', icon: '/assets/icon-curriculo.png', link: '/curriculo' },
   { title: 'Empregador', icon: '/assets/icon-empregador.png', link: '/empregador' },
