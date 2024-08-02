@@ -61,16 +61,9 @@ const navigateTo = () => {
           </div>
           
           <p id="date-hour">{{cardProps.date}} - {{cardProps.job_hours}}</p>
-        </div>
-        
-
-       
+        </div> 
       </div>
-
-     
-
     </div>
-        
   </div>
 </template>
 

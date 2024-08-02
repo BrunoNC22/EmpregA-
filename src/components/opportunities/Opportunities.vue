@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Navigation from '../Navigation.vue';
 import Card from './opportunities_card/Card.vue';
 import { ref } from 'vue';
 
@@ -30,7 +29,7 @@ const options = ref<OptionsType[]>([
           id="search"
           placeholder=" "
         />
-        <label for="search">Oportunidades</label>
+        <label for="search">Cidade</label>
       </div>
   
       <div class="opportunities-wrapper">
