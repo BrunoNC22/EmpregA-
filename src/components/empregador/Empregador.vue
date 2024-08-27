@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { watch } from 'vue';
 import { useGetOpportunitiesQuery } from '../../storage/queries/getOpportunities';
+import OpportunityCard from './OpportunityCard.vue';
 
 const { data: opportunities, isLoading, isError } = useGetOpportunitiesQuery()
 
@@ -22,63 +23,10 @@ watch(opportunities, () => {
     </div>
     <div class="content">
       <template v-if="!isLoading && !isError">
-        <div v-for="(job, index) in opportunities" :key="job.title" class="job-opportunity">
-          <div class="line job-opportunity--title">
-            <div class="prop">
-              <!-- <div class="label">Título:</div> -->
-              <div class="value" style="font-size: 0.9rem;">{{ job.title }}</div>
-            </div>
-            <div class="prop">
-              <!-- <div class="label">$</div> -->
-              <div class="value">{{ job.type }}</div>
-            </div>
-          </div>
-          <div class="line">
-            <div class="prop">
-              <div class="label" style="font-weight: bold;">$</div>
-              <div class="value">{{ job.salary }}</div>
-            </div>
-            <div class="prop">
-              <div class="label">
-                <img src="/assets/empregador/job-opportunity/work schedule.svg" alt="">
-              </div>
-              <div class="value">{{ job.workSchedule + ' - ' + job.workMode }}</div>
-            </div>
-          </div>
-          <div class="line">
-            <div class="prop">
-              <div class="label">
-                <img src="/assets/empregador/job-opportunity/sector icon.svg" alt="">
-              </div>
-              <div class="value">{{ job.sector }}</div>
-            </div>
-            <div class="prop">
-              <div class="label">
-                <img src="/assets/empregador/job-opportunity/location icon.svg" alt="">
-              </div>
-              <div class="value">{{ job.location.city + ' - ' + job.location.state }}</div>
-            </div>
-          </div>
-          <div class="line">
-            <div class="prop">
-              <div class="label">
-                <img src="/assets/empregador/job-opportunity/clock icon.svg" alt="">
-              </div>
-              <div class="value">há 2 dias</div>
-            </div>
-            <div class="prop">
-              <div class="label">
-                <img src="/assets/empregador/job-opportunity/expiration icon.svg" alt="">
-              </div>
-              <div class="value">em 15 dias</div>
-            </div>
-          </div>
-        </div>
+        <OpportunityCard v-for="(job, index) in opportunities" :oppotunity="job" :key="index" />
       </template>
     </div>
   </div>
-  
-  
 </template>
 <style scoped>
 .container {
@@ -113,40 +61,5 @@ watch(opportunities, () => {
   border-radius: 7px;
   margin-top: 14px;
   overflow-y: auto;
-}
-
-.job-opportunity {
-  text-wrap: nowrap;
-  display: grid;
-  padding: 8px;
-  background-color: #F4F4F4;
-  border-radius: 7px;
-  gap: 7px;
-}
-
-.job-opportunity .job-opportunity--title {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.line {
-  display: inline-flex;
-}
-
-.prop:first-child {
-  margin-right: 25px;
-}
-
-.prop {
-  align-items: center;
-  display: flex;
-}
-
-.label {
-  margin-right: 8px;
-}
-
-.value {
-  font-size: .8rem;
 }
 </style>
