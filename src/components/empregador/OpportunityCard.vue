@@ -6,6 +6,9 @@ defineProps<{ oppotunity: Opportunity}>()
 </script>
 <template>
   <div class="job-opportunity">
+    <div class="three-dots-wrapper">
+      <img src="/assets/empregador/job-opportunity/tres pontos.svg" alt="icone de mais opções" title="Opções"  class="three-dots">
+    </div>
     <div class="line job-opportunity--title">
       <div class="prop">
         <!-- <div class="label">Título:</div> -->
@@ -60,6 +63,7 @@ defineProps<{ oppotunity: Opportunity}>()
 </template>
 <style scoped>
 .job-opportunity {
+  position: relative;
   height: fit-content;
   text-wrap: nowrap;
   display: grid;
@@ -67,6 +71,12 @@ defineProps<{ oppotunity: Opportunity}>()
   background-color: #F4F4F4;
   border-radius: 7px;
   gap: 7px;
+}
+
+.three-dots-wrapper {
+  position: absolute;
+  margin: 0 8px;
+  right: 0;
 }
 
 .job-opportunity .job-opportunity--title {
