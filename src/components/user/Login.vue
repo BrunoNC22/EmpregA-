@@ -1,5 +1,5 @@
 <script setup  lang="ts">
-import { reactive, ref } from 'vue';
+import { reactive} from 'vue';
 import LoginFormInput from './login_form/LoginFormInput.vue';
 import router from '../../router';
 
@@ -61,7 +61,8 @@ const handleSubmit = async () => {
 <style scoped>
 .login-container {
   background: var(--primary-blue-color);
-  height: 100%;
+  height: 100vh;
+  overflow: hidden auto;
 }
 
 .login-header {

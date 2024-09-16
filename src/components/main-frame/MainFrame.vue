@@ -24,7 +24,7 @@ const route = useRoute()
   height: 100vh;
   display: grid;
   grid-template-rows: min-content min-content auto;
-  padding: 43px 36px 101px 36px;
+  padding: 43px 36px 43px 36px;
 }
 
 .main-frame-header {

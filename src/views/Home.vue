@@ -12,7 +12,7 @@ interface OptionsType {
 }
 
 
-/* need to change the paths to real ones */
+
 
 const options = ref<OptionsType[]>([
   { title: 'Seu Perfil', icon: '/assets/icon-perfil.png', link: '/profile' },
@@ -70,6 +70,7 @@ const options = ref<OptionsType[]>([
 .cards-wrapper {
   margin-top: 60px; 
   justify-content: center;
+  
 }
 
 .cards-container {
@@ -110,6 +111,9 @@ const options = ref<OptionsType[]>([
 @media screen and (max-width: 768px){
   .card-container{
     padding: 8px;
+    font-size: 13px;
   }
+
+  
 }
 </style>
