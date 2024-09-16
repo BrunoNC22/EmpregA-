@@ -10,6 +10,12 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      path: '/',
+      redirect: (to) => {
+        return '/login'
+      }
+    },
+    {
       path: '/home',
       name: 'home',
       component: Home
@@ -20,8 +26,8 @@ const router = createRouter({
       component: Login
     },
     {
-
-      path: '/nqp98d78yqui398dy780qyodh89a70yodiuoahd78ye1278eywq89s', // gambiarra que funciona
+      path: '',
+      redirect: (to) => '/login',
       component: MainFrame,
       children: [
         {
