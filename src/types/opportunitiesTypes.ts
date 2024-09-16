@@ -1,3 +1,28 @@
+export type WorkScheduleEnum = {
+  PART_TIME: 'part-time',
+  FULL_TIME: 'full-time'
+}
+
+export type WorkModeEnum = {
+  HYBRID: 'hybrid',
+  ONSITE: 'onsite',
+  REMOTE: 'remote'
+}
+
+export type OpportunityLevelEnum = {
+  JUNIOR: 'junior',
+  MID: 'mid',
+  SENIOR: 'senior',
+  MANAGERIAL: 'managerial'
+}
+
+export type OpportunityTypeEnum = {
+  INTERNSHIP: 'internship',
+  SCHOLARSHIP: 'scholarship',
+  CLT: 'clt',
+  PJ: 'pj'
+}
+
 export type ApiOpportunity = {
   "companyId": string,
   "location": {
@@ -5,17 +30,17 @@ export type ApiOpportunity = {
     "city": string
   },
   "title": string,
-  "type": 'internship' | 'scholarship' | 'clt' | 'pj' 
+  "type": OpportunityTypeEnum['INTERNSHIP'] | OpportunityTypeEnum['SCHOLARSHIP'] | OpportunityTypeEnum['CLT'] | OpportunityTypeEnum['PJ'],
   "salary": number,
   "benefits": string[],
   "requirements": string[],
   "description": string,
   "publicationDate": string,
   "applicationDeadline": string,
-  "workSchedule": 'part-time' | 'full-time',
-  "workMode": "hybrid" | 'onsite' | 'remote',
+  "workSchedule": WorkScheduleEnum["PART_TIME"] | WorkScheduleEnum["FULL_TIME"],
+  "workMode": WorkModeEnum['HYBRID'] | WorkModeEnum['ONSITE'] | WorkModeEnum['REMOTE'],
   "sector": string,
-  "level": 'junior' | 'mid' | 'senior' | 'managerial',
+  "level": OpportunityLevelEnum['JUNIOR'] | OpportunityLevelEnum['MID'] | OpportunityLevelEnum['SENIOR'] | OpportunityLevelEnum['MANAGERIAL'],
   "contact": {
     "email": string,
     "phone": string
