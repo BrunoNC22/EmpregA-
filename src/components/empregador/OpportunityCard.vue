@@ -1,14 +1,35 @@
 <script setup lang="ts">
 import { Opportunity } from '../../types/opportunitiesTypes';
+import { ref, watch } from 'vue';
 
 defineProps<{ oppotunity: Opportunity}>()
+const popover = ref()
+const selectedAction = ref()
+const actions = ref([
+  {
+    action: 'Editar',
+  },
+  {
+    action: 'Excluir',
+  },
+  {
+    action: 'Fechar'
+  }
+])
 
+watch(selectedAction, () => {
+  console.log('ação selecionada: ', selectedAction.value)
+})
 </script>
 <template>
   <div class="job-opportunity">
-    <div class="three-dots-wrapper">
+    <div class="three-dots-wrapper" @click="popover.toggle">
       <img src="/assets/empregador/job-opportunity/tres pontos.svg" alt="icone de mais opções" title="Opções"  class="three-dots">
+      <Popover ref="popover">
+        <Listbox v-model="selectedAction" :options="actions" optionLabel="action" /> 
+      </Popover>
     </div>
+    
     <div class="line job-opportunity--title">
       <div class="prop">
         <!-- <div class="label">Título:</div> -->
