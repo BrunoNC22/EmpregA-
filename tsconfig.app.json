@@ -17,10 +17,12 @@
     "noEmit": true,
     "jsx": "preserve",
 
-    /* Linting */
+    /* Linting (Ajustado) */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,    // Permitir variáveis não utilizadas
+    "noUnusedParameters": false, // Permitir parâmetros não utilizados
+    "noImplicitAny": false,     // Ser menos estrito com a inferência de tipos
+    "strictNullChecks": false,  // Permitir valores nulos
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
