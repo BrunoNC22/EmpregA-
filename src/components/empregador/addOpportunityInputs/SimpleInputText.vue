@@ -1,33 +1,14 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import {ErrorObject} from '@vuelidate/core'
 
-const props = defineProps({
-  title: {
-    required: true,
-    type: String
-  },
-  placeholder: {
-    required: false,
-    default: '',
-    type: String
-  },
-  helpText: {
-    required: true,
-    type: String
-  },
-  model: {
-    required: true,
-    type: String
-  },
-  errors: {
-    required: false,
-  },
-  required: {
-    required: false,
-    default: false,
-    type: Boolean
-  }
-})
+const props = defineProps<{
+  title: string,
+  placeholder: string | '',
+  helpText: string,
+  model: string,
+  errors: ErrorObject[],
+  required?: boolean | false
+}>()
 
 const emit = defineEmits(['update:model'])
 
