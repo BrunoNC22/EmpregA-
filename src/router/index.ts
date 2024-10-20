@@ -5,6 +5,8 @@ import FreeCourses from '../components/free-courses/FreeCourses.vue'
 import MainFrame from '../components/main-frame/MainFrame.vue'
 import Opportunities from '../components/opportunities/Opportunities.vue'
 import Empregador from '../components/empregador/Empregador.vue'
+import Profile from '../components/user/Profile.vue'
+import Curriculo from '../components/user/Curriculo.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,6 +49,16 @@ const router = createRouter({
         }
       ]
     },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile
+    },
+    {
+      path: '/curriculo',
+      name: 'curriculo',
+      component: Curriculo
+    }
   ]
 })
 
