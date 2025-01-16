@@ -14,7 +14,18 @@ const router = createRouter({
     {
       path: '/',
       redirect: (to) => {
+        to.query
         return '/login'
+      }
+    },
+    {
+      path: '/google-oauth-callback',
+      redirect: (to) => {
+        localStorage.setItem('token', <string>to.query.token)
+        localStorage.setItem('username', <string>to.query.username)
+        localStorage.setItem('email', <string>to.query.email)
+        localStorage.setItem('profilePictureURL', <string>to.query.profilePictureURL)
+        return { path: '/home', query: {} }
       }
     },
     {

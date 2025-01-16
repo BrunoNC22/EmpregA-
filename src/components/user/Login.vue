@@ -42,6 +42,10 @@ const form: LoginFormType = reactive([
 const handleSubmit = async () => {
   await router.push({path: '/home'})
 }
+
+const handleGoogleLogin = () => {
+  window.location.href = 'http://localhost:9999/auth/google/login'
+}
 </script>
 <template>
 
@@ -55,6 +59,7 @@ const handleSubmit = async () => {
       <img src="/assets/login-user-icon.svg">
       <LoginFormInput v-for="obj in form" :key="obj.placeholder" :model="obj"/>
       <button class="login-submit-buttom" type="submit" >CONFIRMAR</button>
+      <button class="login-submit-buttom" type="button" @click="handleGoogleLogin">Login com conta Google</button>
     </form>
   </div>
 </template>
@@ -89,7 +94,8 @@ const handleSubmit = async () => {
 .login-submit-buttom {
   background-color: var(--primary-yellow-color);
   height: 55px;
-  width: 220px;
+  width: auto;
+  padding: 0 17px;
   flex-grow: 0;
   margin: 15px 125px 24px 138px;
   border-radius: 6px;
