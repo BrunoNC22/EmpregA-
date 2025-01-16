@@ -22,6 +22,8 @@ const options = ref<OptionsType[]>([
   { title: 'Empregador', icon: '/assets/icon-empregador.png', link: '/empregador' },
   { title: 'Atendimento', icon: '/assets/icon-atendimento.png', link: '/atendimento' },
 ]);
+
+const userName = localStorage.getItem('username')
 </script>
 
 <template>
@@ -29,7 +31,7 @@ const options = ref<OptionsType[]>([
   <main class="profile-container">
     <section class="section-container">
         <div class="user-hi">
-            <p>Bem-vindo(a), <span>Matheus</span></p>
+            <p>Bem-vindo(a), <span>{{ userName }}!</span></p>
         </div>
         <div class="cards-wrapper">
             <div class="cards-container">
